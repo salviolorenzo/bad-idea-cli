@@ -1,6 +1,6 @@
 # Bad Idea CLI
 
-A command-line interface tool for managing and tracking your questionable ideas.
+A command-line interface tool for wasting time.
 
 ## Installation
 
