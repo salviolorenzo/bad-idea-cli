@@ -8,19 +8,16 @@ import rickroll from './commands/rickroll';
 import fortune from './commands/fortune';
 import { typeWriter } from './utils/typeWriter';
 import matrix from './commands/matrix';
+import help from './commands/help';
 
 process.removeAllListeners('warning');
 
 const [cmd, ...args] = process.argv.slice(2);
 
 switch (cmd) {
-	case 'setup':
-		console.log('setup');
-		break;
-
 	case '--help':
 	case '-h':
-		console.log(chalk.green('Help'));
+		help();
 		break;
 
 	case 'version':
@@ -66,4 +63,9 @@ switch (cmd) {
 
 	default:
 		console.log(chalk.red('The ' + cmd + ' command is not defined...yet!'));
+		console.log(
+			chalk.green(
+				'Try ' + chalk.bold('bad-idea --help') + ' for more information.'
+			)
+		);
 }
